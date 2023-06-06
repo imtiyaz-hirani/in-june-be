@@ -18,7 +18,7 @@ public class EmployeeController {
 		List<Employee> list = employeeService.getAllEmployees();
 		
 		for(Employee e : list) { //[e1,e2,e3]  -- e=e1 (loop) , e=e2 (loop), e=e3 (loop)
-			System.out.println(e.getId() + "--" + e.getName()) ;
+			//System.out.println(e.getId() + "--" + e.getName()) ;
 		}
 	}
 }

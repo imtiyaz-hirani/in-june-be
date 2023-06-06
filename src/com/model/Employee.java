@@ -1,19 +1,11 @@
 package com.model;
  //encapsulation 
-public class Employee {
-	private int id; 
+public class Employee extends BaseEntity{
+	   
 	private String name;
 	private String city; 
 	private String department; 
 	private double salary;
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
