@@ -3,7 +3,7 @@ package com.model;
 public class Student extends College{
 	private String name;
 	private String address;
-	 //id comes from college as it is public in BaseEntity
+	 //id comes from college as it is protected in BaseEntity
 	 
 	public Student(long id, String name, String address) {
 		 this.id = id; 
