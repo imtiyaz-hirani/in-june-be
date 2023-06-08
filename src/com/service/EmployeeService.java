@@ -3,9 +3,11 @@ package com.service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.model.Employee;
 import com.persistence.EmployeeRepository;
+import com.utility.SortUtility;
 
 public class EmployeeService implements EmployeeRepository{
 
@@ -20,6 +22,25 @@ public class EmployeeService implements EmployeeRepository{
 		/* Use Comparable interface, to define the criteria*/
 		
 		return list; 
+	}
+
+	public List<Employee> getEmployeesInSortedOrderOfSalaryComparator(List<Employee> list, 
+			String direction) {
+		
+		if(direction.equals("ASC")) {
+			Collections.sort(list,new SortUtility("ASC"));
+		}
+		else { //DESC
+			Collections.sort(list,new SortUtility("DESC"));
+		}
+		return list;
+	}
+
+	public List<Employee> getEmployeesInSortedOrderOfSalaryUsingStream(List<Employee> list) {
+		list = list.stream()
+		.sorted((e1,e2)->e2.getSalary().compareTo(e1.getSalary()))
+		.collect(Collectors.toList());
+		return list;
 	}
 	
 }

@@ -44,7 +44,7 @@ public class Employee  extends BaseEntity implements Comparable<Employee>{
 		this.department = department;
 	}
 
-	public double getSalary() {
+	public Double getSalary() {
 		return salary;
 	}
 

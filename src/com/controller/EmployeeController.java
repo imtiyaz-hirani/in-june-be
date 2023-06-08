@@ -19,6 +19,8 @@ public class EmployeeController {
 			System.out.println("3. Fetch employee by id using stream");
 			System.out.println("4. Fetch employee by id using stream orElse method");
 			System.out.println("5. Sort Employees as per salary: ASC");
+			System.out.println("6. Sort Employees as per salary: DESC");
+			System.out.println("7. Sort Employees as per salary");
 			System.out.println("0. Exit");
 			int input = sc.nextInt(); 
 			if(input ==0) {
@@ -66,6 +68,14 @@ public class EmployeeController {
 				break;
 			case 5:
 				list = employeeService.getEmployeesInSortedOrderOfSalary(list, "ASC");
+				list.stream().forEach(System.out :: println);
+				break;
+			case 6:
+				list = employeeService.getEmployeesInSortedOrderOfSalaryComparator(list,"ASC");
+				list.stream().forEach(System.out :: println);
+				break;
+			case 7:
+				list = employeeService.getEmployeesInSortedOrderOfSalaryUsingStream(list);
 				list.stream().forEach(System.out :: println);
 				break;
 			default:
