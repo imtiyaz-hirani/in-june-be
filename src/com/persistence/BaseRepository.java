@@ -9,11 +9,7 @@ public abstract interface BaseRepository {
 		System.out.println("dbClose");
 	}
 	
-	public abstract void save();
-	public abstract void delete();
-	public void getAll();
-	public void getOne();
-	public void put();
+	 
 }
 
 //Spring has already done it for us. : JpaRepository / CrudRepository 

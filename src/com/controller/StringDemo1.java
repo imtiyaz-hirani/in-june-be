@@ -33,7 +33,7 @@ public class StringDemo1 {
 		
 		s1.concat(" potter");
 		
-		System.out.println(s1); //"harry", no pooter Y? U did not assign the new value to s1 at 34.
+		System.out.println(s1); //"harry", no potter Y? U did not assign the new value to s1 at 34.
 		s1 = s1.concat(" potter");
 		System.out.println(s1); //harry potter
 		

@@ -3,7 +3,7 @@ package com.model;
 public abstract class BaseEntity {
 	protected long id;
 	
-	protected long getId() {
+	public long getId() {
 		return id;
 	}
 

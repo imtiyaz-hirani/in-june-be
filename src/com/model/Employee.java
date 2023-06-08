@@ -1,11 +1,24 @@
 package com.model;
  //encapsulation 
-public class Employee extends BaseEntity{
+public class Employee  extends BaseEntity implements Comparable<Employee>{
 	   
 	private String name;
 	private String city; 
 	private String department; 
 	private double salary;
+	
+	
+	public Employee(long id, String name, String city, String department, double salary) {
+		this.id = id; 
+		this.name = name;
+		this.city = city;
+		this.department = department;
+		this.salary = salary;
+	}
+
+	
+	public Employee() { }
+
 
 	public String getName() {
 		return name;
@@ -37,6 +50,22 @@ public class Employee extends BaseEntity{
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Employee [id="+ id +", name=" + name + ", city=" + city + ", department=" + department + ", salary=" + salary + "]";
+	}
+
+
+	@Override
+	public int compareTo(Employee e2) { 
+		//to give criteria of sorting between 2 employees, u must use this operator 
+		/* this : employee 1 */
+		/* e2: employee 2 */
+		 
+		return (int) (this.salary - e2.salary);
 	} 
 	
 	
