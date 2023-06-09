@@ -1,6 +1,6 @@
 package com.model;
 
-public class Product {
+public class Product implements Comparable<Product>{
 	private int id;
 	private String description;
 	private String title;
@@ -38,4 +38,16 @@ public class Product {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", description=" + description + ", title=" + title + ", price=" + price + "]";
+	}
+
+	@Override
+	public int compareTo(Product p2) { //this = p1
+		 
+		return (int)(p2.price - this.price); //ASC
+	}
+
+	
 }

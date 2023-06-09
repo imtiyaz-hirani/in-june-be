@@ -2,7 +2,9 @@ package com.service;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.model.Employee;
@@ -42,8 +44,32 @@ public class EmployeeService implements EmployeeRepository{
 		.collect(Collectors.toList());
 		return list;
 	}
+
+	public Map<String, Long> getEmployeeStatsByDepartment(List<Employee> list) {
+		/* 1. figure out number of departments */
+		//e1() e2 e3 e4
+		Map<String, Long> map = new HashMap();
+		List<String> listDept = list.stream()   
+										.map(e-> e.getDepartment())
+										.distinct()
+										.collect(Collectors.toList());
+		/* 2. For each department, calculate number of employees working */
+		//d=IT, d=ADMIN, d=
+		listDept.stream().forEach(d->{
+			long count = list.stream()
+							.filter(e->e.getDepartment().equals(d))
+							.count();
+			map.put(d,count); //IT:2 ADMIN:1 SALES:1
+		});
+		return map; 
+	}
 	
 }
+/* 
+ [
+ IT:2, ADMIN:1, SALES:1
+ ]
+ */
 
 /* 
  Sorting can have 3 approches
