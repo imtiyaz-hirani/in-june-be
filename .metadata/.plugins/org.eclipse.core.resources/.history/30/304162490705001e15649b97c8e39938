@@ -1,0 +1,18 @@
+package com.controller;
+
+public class StringDemo1 {
+	public static void main(String[] args) {
+		/* There are 2 ways in which we can create the String */
+		
+		/* 1. Create literals 
+		 * 2. Create Objects 
+		 */
+		
+		//Literal
+		String s1 = "harry";
+		
+		//Object
+		String sObj = new String("harry");
+		 
+	}
+}

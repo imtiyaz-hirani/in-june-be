@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\indeco-june\.metadata\.plugins\org.eclipse.jdt.core
+3638472311.index
+3152806741.index
+1278937381.index
+3020181325.index
+1924724220.index

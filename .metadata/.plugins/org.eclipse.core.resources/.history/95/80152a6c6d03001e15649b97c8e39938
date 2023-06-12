@@ -1,0 +1,14 @@
+package com.service;
+
+import com.model.Employee;
+
+public class AppService {
+
+	public void getAllEmployees() {
+		Employee e1 = new Employee(); //ctrl + shft + O
+		
+	}
+}
+
+//A : A a = new A(); 
+//C : C c = new C(); 

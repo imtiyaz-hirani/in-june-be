@@ -1,0 +1,31 @@
+package com.mymavenapp.persistence;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.mymavenapp.model.Employee;
+ 
+
+public interface EmployeeRepository extends BaseRepository{
+
+	//this repo has dbConnect and dbClose method from BaseRepository
+	
+	public default int save(Employee employee,Connection con){
+		int status = 0; 
+		/* To execute the query we need to prepare the statement */
+		String query="insert into employee(name,city,salary) values (?,?,?)";
+		try {
+			PreparedStatement pstmt =   con.prepareStatement(query);
+			/* Once the statement is prepared, we execute the query */
+			pstmt.setString(1, employee.getName());
+			pstmt.setString(2, employee.getCity());
+			pstmt.setDouble(3, employee.getSalary());
+			
+			status = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return status; 
+	}
+}

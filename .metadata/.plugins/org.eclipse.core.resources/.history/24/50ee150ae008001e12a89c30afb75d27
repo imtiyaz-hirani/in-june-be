@@ -1,0 +1,28 @@
+package com.mymavenapp.persistence;
+
+import java.sql.Connection;
+
+public interface BaseRepository {
+	public String url="jdbc:mysql://localhost:3306/in_june_be";
+	public String dbUser = "root";
+	public String dbPassword = "";
+	public String driver="com.mysql.cj.jdbc.Driver";
+	
+	/* Ref of Connection */
+	public Connection con; 
+	public default void dbConnect() {
+		/* Step 1: Load the driver */
+		try {
+			Class.forName(driver);
+			System.out.println("Driver Loaded...");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		/* Step 2: Establish Connection and save it in Connection ref.  */
+	}
+	
+	public default void dbClose() {
+		
+	}
+}

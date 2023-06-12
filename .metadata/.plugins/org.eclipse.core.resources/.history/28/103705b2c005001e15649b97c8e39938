@@ -1,0 +1,23 @@
+package com.controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.model.Employee;
+import com.service.EmployeeService;
+
+public class EmployeeController {
+	public static void main(String[] args) { 
+		EmployeeService employeeService = new EmployeeService();
+		List<Employee> list = employeeService.getAll();
+		
+		System.out.println("=====ALL EMPLOYEES=====");
+		list.stream().forEach(System.out :: println);
+		
+		System.out.println("===Fetch employee by id===");
+		Scanner sc = new Scanner(System.in);
+		int id = sc.nextInt();
+		Employee e = employeeService.getById(list, id);
+		System.out.println(e);
+	}
+}

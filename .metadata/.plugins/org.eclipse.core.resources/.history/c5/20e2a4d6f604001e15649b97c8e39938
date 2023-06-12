@@ -1,0 +1,14 @@
+package com.controller;
+
+public class ExceptionDemo {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class A{
+	void doTask() {
+		System.out.println("task done");
+	}
+}

@@ -1,0 +1,34 @@
+package com.controller;
+
+import com.service.ThreadService;
+
+public class MultithreadingDemo {
+	public static void main(String[] args) throws InterruptedException { //main
+		/* to create a thread we can use Thread class */
+		
+		//My Custom thread
+		Thread t1 = new Thread(new ThreadUtil(),"MyThread-1");
+		t1.start();
+		
+		t1.join(); //we are asking JVM(thread: main) to join t1
+		
+		System.out.println("thank you!!!");
+	}
+}
+
+class ThreadUtil extends Thread{
+	@Override
+	public void run() {
+		// give your task
+		ThreadService.displayNumbers(10); 
+	}
+}
+
+/* 
+ THread class has 2 notable methods:
+ 1. start() - used to start the thread
+ 2. run() - called from start, and executes the task   
+ 
+ Note: do not override start(), dont even worry about it. 
+ Override run() method and give the work
+ */

@@ -1,0 +1,15 @@
+package com.controller;
+
+public class ExceptionDemo {
+	public static void main(String[] args) {
+		A a=new A(); 
+		a.doTask();
+	}
+}
+
+
+class A{
+	void doTask() {
+		System.out.println("task done");
+	}
+}

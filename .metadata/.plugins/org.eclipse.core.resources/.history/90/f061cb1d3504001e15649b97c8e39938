@@ -1,0 +1,20 @@
+package com.model;
+
+public class Student extends BaseEntity{
+	private String name;
+	private int roll;
+	 
+	
+	public Student(String name, int roll) {
+		 
+		this.name = name;
+		this.roll = roll;
+	}
+
+
+	public Student() {
+		 
+	} 
+	
+	
+}

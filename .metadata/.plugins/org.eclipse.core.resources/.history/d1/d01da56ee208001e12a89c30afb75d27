@@ -1,0 +1,23 @@
+package com.mymavenapp.controller;
+
+import java.util.Scanner;
+
+import com.mymavenapp.service.EmployeeService;
+
+public class EmployeeController {
+	public static void main(String[] args) {
+		/* connect to EmployeeService */
+		EmployeeService service = new EmployeeService();
+		service.dbConnect();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("==========Employee Operations========");
+		System.out.println("1. Insert Employee");
+		System.out.println("2. Display all Employees");
+		System.out.println("3. Delete Employee");
+		System.out.println("4. Update Employee");
+		System.out.println("0. Exit");
+		
+		
+	}
+}

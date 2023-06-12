@@ -1,0 +1,22 @@
+package com.controller;
+
+public class ExceptionDemo {
+	public static void main(String[] args) { //thread: main
+		A a=new A(); 
+		a.doTask();
+		int result = a.compute(12,0);
+		System.out.println("Result is " + result);
+		System.out.println("thank you");
+	}
+}
+
+class A{ //you are this programmer : service class 
+	void doTask() {
+		System.out.println("task done");
+	}
+
+	public int compute(int i, int j) {
+		// perform divide
+		return i/j;
+	}
+}

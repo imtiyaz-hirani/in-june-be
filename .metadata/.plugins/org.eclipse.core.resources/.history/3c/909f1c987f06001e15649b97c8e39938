@@ -1,0 +1,24 @@
+package com.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo {
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<>();
+		map.put("harry", "potter");
+		map.put("ronald", "weasley");
+		map.put("hermione", "granger");
+		
+		System.out.println(map);
+	}
+}
+
+/*
+  list.add(obj) 
+  map.put(key,value)
+  key: username
+  value: password
+  
+  
+ */

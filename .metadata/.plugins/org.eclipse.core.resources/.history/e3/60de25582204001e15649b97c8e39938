@@ -1,0 +1,11 @@
+package com.controller;
+
+public class App {
+	public static void main(String[] args) {
+		/* create multiple customers of the bank */
+		
+		/* I want to maintain balance of customers after deposit and withdrawal operation */
+		
+		/* How can i manage the memory better */
+	}
+}

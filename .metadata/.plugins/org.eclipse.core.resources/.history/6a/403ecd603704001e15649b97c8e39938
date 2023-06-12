@@ -1,0 +1,12 @@
+package com.model;
+
+public class College extends BaseEntity{
+	//id comes from BaseEntity as it is public 
+	private final String cname="ACS Institute of Tech";
+	
+	public String getCname() {
+		return cname;
+	}
+	
+	
+}

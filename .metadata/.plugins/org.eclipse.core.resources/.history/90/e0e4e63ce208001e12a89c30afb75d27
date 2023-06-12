@@ -1,0 +1,11 @@
+package com.mymavenapp.controller;
+
+import com.mymavenapp.service.EmployeeService;
+
+public class EmployeeController {
+	public static void main(String[] args) {
+		/* connect to EmployeeService */
+		EmployeeService service = new EmployeeService();
+		service.dbConnect();
+	}
+}

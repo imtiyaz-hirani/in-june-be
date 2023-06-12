@@ -1,0 +1,17 @@
+package com.service;
+
+import com.exception.IllegalMarksException;
+
+public class MarksService {
+
+	public String compute(double marks_scored, double total_marks) throws IllegalMarksException{
+		if(marks_scored >100)
+			throw new IllegalMarksException("marks cannot be > 100");
+		if(marks_scored < 0)	
+		
+		if(marks_scored > total_marks)
+			
+		return null;
+	}
+
+}

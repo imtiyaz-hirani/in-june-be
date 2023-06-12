@@ -1,0 +1,6 @@
+package com.mymavenapp.persistence;
+
+public interface BaseRepository {
+
+	
+}

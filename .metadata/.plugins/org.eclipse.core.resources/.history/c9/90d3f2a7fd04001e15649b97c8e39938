@@ -1,0 +1,9 @@
+package com.exception;
+
+public class DivideByZeroException extends Exception{
+	//to make my custom class an exception class, I must extend it with Exception class. 
+
+	public DivideByZeroException(String message) {
+		
+	}
+}

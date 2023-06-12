@@ -1,0 +1,14 @@
+package com.model;
+
+public class Test { }
+
+class A{
+	 
+	void m1() {
+		System.out.println("m1 in A");	 
+	}
+}
+
+class B extends A{
+	//all the methods of A now are part of B
+}

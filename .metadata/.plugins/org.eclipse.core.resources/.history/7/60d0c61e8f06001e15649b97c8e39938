@@ -1,0 +1,10 @@
+package com.controller;
+
+import java.io.File;
+
+public class FileDemo {
+	public static void main(String[] args) {
+		/* STEP 1: Create a handler */
+		File file = new File("myfile.txt");
+	}
+}

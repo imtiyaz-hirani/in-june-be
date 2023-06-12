@@ -1,0 +1,11 @@
+package com.mymavenapp.persistence;
+
+public interface BaseRepository {
+	public default void dbConnect() {
+		
+	}
+	
+	public default void dbClose() {
+		
+	}
+}

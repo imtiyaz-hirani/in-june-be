@@ -1,0 +1,17 @@
+package com.mymavenapp.persistence;
+
+public interface BaseRepository {
+	public String url="jdbc:mysql://localhost:3306/in_june_be";
+	public String dbUser = "root";
+	public String dbPassword = "";
+	public String driver="com.mysql.cj.jdbc.Driver";
+	
+	public default void dbConnect() {
+		/* Step 1: Load the driver */
+		Class.forName(driver);
+	}
+	
+	public default void dbClose() {
+		
+	}
+}

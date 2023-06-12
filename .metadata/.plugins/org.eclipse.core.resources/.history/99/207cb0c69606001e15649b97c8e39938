@@ -1,0 +1,12 @@
+package com.controller;
+
+import com.service.ThreadService;
+
+public class MultithreadingDemo {
+	public static void main(String[] args) { //main
+		/* to create a thread we can use Thread class */
+		
+		ThreadService service = new ThreadService();
+		service.displayNumbers(10);
+	}
+}

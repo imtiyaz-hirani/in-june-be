@@ -1,0 +1,13 @@
+package com.controller;
+
+public class ArrayDemo {
+	public static void main(String[] args) {
+		/* 3 ways for creating an array */
+		
+		//Type 1 : giving values directly 
+		int[] x= {1,4,2,7,6,9,3}; 
+		
+		//Type 2: we dont know the value just yet. they will come from DB later on
+		int[] y;
+	}
+}

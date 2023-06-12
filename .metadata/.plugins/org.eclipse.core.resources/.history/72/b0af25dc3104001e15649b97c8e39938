@@ -1,0 +1,23 @@
+package com.model;
+
+public class Test { }
+
+class A{ //super
+	 
+	void m1() {
+		System.out.println("m1 in A");	 
+	}
+}
+
+class B extends A{ //sub
+	//all the methods of A now are part of B
+	
+	void m2() {
+		System.out.println("m2 of B");
+	}
+}
+
+/* Inheritance : 2 thigs 
+ a. add new functionality: add new method 
+ b. change/alter existing functionality 
+ */

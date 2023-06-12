@@ -1,0 +1,8 @@
+package com.controller;
+
+public class StringDemo1 {
+	public static void main(String[] args) {
+		String s1 = "harry";
+		String s2="harry";
+	}
+}

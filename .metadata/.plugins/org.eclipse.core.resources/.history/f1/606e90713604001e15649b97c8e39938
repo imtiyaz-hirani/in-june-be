@@ -1,0 +1,18 @@
+package com.model;
+
+public class BaseEntity {
+	public long id;
+	
+	public BaseEntity(int id) {
+		this.id = id; 
+	}
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	} 
+	
+}
+//final: when u have a common value for all object 

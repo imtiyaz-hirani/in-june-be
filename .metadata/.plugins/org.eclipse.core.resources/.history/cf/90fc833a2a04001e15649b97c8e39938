@@ -1,0 +1,14 @@
+package com.model;
+
+public class Test {
+	int x; //0:JVM 
+	
+	void something(int z) {
+		int y; // no value
+		System.out.println(y); //CF
+		
+		System.out.println(z);
+	}
+}
+
+

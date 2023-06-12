@@ -1,0 +1,30 @@
+package com.controller;
+
+import com.exception.DivideByZeroException;
+
+public class ExceptionDemo {
+	public static void main(String[] args) { //thread: main
+		A a=new A(); 
+		a.doTask();
+		 
+		int result = a.compute(12,0);
+		System.out.println("Result is " + result);
+		 
+		System.out.println("thank you");
+	}
+}
+
+class A{ //you are this programmer : service class 
+	void doTask() {
+		System.out.println("task done");
+	}
+
+	public int compute(int i, int j) {
+		DivideByZeroException div = new DivideByZeroException(); 
+		if(j == 0) {
+			throw new DivideByZeroException();
+		}
+		// perform divide
+		 return i/j;
+	}
+}

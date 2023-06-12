@@ -1,0 +1,6 @@
+package com.mymavenapp.persistence;
+
+public interface EmployeeRepository extends BaseRepository{
+
+	//this repo has dbCOnnect and dbClose method from BaseRepository
+}

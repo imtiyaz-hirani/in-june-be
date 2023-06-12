@@ -1,0 +1,8 @@
+package com.mymavenapp.service;
+
+import com.mymavenapp.persistence.EmployeeRepository;
+
+public class EmployeeService implements EmployeeRepository{
+
+	//Service is getting dbConnect() and dbClose() from Repo 
+}

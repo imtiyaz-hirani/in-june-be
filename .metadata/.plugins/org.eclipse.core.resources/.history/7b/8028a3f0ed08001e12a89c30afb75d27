@@ -1,0 +1,5 @@
+package com.mymavenapp.exception;
+
+public class ResourceNotFoundExeption {
+
+}

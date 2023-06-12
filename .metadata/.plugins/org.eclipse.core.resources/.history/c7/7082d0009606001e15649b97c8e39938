@@ -1,0 +1,10 @@
+package com.service;
+
+public class ThreadService {
+
+	public void displayNumbers(int num) {
+		for(int i=0;i<num;i++) {
+			System.out.print(i + " - ");
+		}
+	}
+}

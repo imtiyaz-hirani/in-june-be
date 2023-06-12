@@ -1,0 +1,18 @@
+package com.controller;
+
+import com.model.Customer;
+
+public class App {
+	public static void main(String[] args) {
+		/* create multiple customers of the bank */
+		Customer c1 = new Customer(1,"harry potter","london",120000);
+		
+		Customer c2 = new Customer(); 
+		c2.setId(1);
+		c2.setName("harry potter");
+		
+		/* I want to maintain balance of customers after deposit and withdrawal operation */
+		
+		/* How can i manage the memory better */
+	}
+}

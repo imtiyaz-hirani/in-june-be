@@ -1,0 +1,16 @@
+package com.controller;
+
+import java.util.List;
+
+import com.model.Employee;
+import com.service.EmployeeService;
+
+public class EmployeeController {
+	public static void main(String[] args) { 
+		EmployeeService employeeService = new EmployeeService();
+		List<Employee> list = employeeService.getAll();
+		
+		System.out.println("=====ALL EMPLOYEES=====");
+		list.stream().forEach(System.out :: println);
+	}
+}

@@ -1,0 +1,8 @@
+package com.mymavenapp.exception;
+
+public class ResourceNotFoundExeption extends Exception{
+
+	public ResourceNotFoundExeption(String message) {
+		super(message);
+	}
+}

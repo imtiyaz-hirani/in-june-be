@@ -1,0 +1,42 @@
+package com.controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.exception.ResourceNotFoundException;
+import com.model.Employee;
+import com.service.EmployeeService;
+
+public class EmployeeController {
+	public static void main(String[] args) { 
+		Scanner sc = new Scanner(System.in);
+		EmployeeService employeeService = new EmployeeService();
+		List<Employee> list = employeeService.getAll();
+		
+		System.out.println("=====ALL EMPLOYEES=====");
+		list.stream().forEach(System.out :: println);
+		
+		System.out.println("===Fetch employee by id===");
+		System.out.println("Enter employee id to fetch record: ");
+		
+		long id = sc.nextLong();
+	 
+		try {
+			Employee  e = employeeService.getById(list, id);
+			System.out.println(e);
+		} catch (ResourceNotFoundException e1) {
+			 System.out.println(e1.getMessage());
+		}
+		
+		System.out.println("===Fetch employee by id using stream ===");
+		System.out.println("Enter employee id to fetch record: ");
+		long id = sc.nextLong();
+		 
+		try {
+			Employee  e = employeeService.getByIdStream(list, id);
+			System.out.println(e);
+		} catch (ResourceNotFoundException e1) {
+			 System.out.println(e1.getMessage());
+		}
+	}
+}

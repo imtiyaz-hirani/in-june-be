@@ -1,0 +1,17 @@
+package com.controller;
+
+import com.model.BaseEntity;
+import com.model.Student;
+
+public class keywordsApp {
+	public static void main(String[] args) {
+		Student s1 = new Student(1,"imtiyaz","mumbai");
+		System.out.println(s1.getCname());
+		
+		
+		BaseEntity entity = new BaseEntity();
+		entity.id = 45; //cannot access id as it is protected. 
+		
+		entity.setId(45);
+	}
+}

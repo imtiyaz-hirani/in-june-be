@@ -1,0 +1,13 @@
+package com.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.model.Employee;
+import com.persistence.EmployeeRepository;
+
+public class EmployeeService implements EmployeeRepository{
+
+	
+	
+}

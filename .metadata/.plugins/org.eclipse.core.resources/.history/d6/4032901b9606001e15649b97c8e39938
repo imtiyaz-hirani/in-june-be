@@ -1,0 +1,10 @@
+package com.controller;
+
+public class MultithreadingDemo {
+	public static void main(String[] args) { //main
+		/* to create a thread we can use Thread class */
+		
+		Thread t1 = new Thread(); 
+		t1.start();
+	}
+}

@@ -1,0 +1,21 @@
+package com.model;
+
+public class Student extends College{
+	private String name;
+	private String address;
+	 
+	 
+	public Student(long id, String name, String address) {
+		this.id = id; 
+		super();
+		this.name = name;
+		this.address = address;
+	}
+
+
+	public Student() {
+		 
+	} 
+	
+	
+}

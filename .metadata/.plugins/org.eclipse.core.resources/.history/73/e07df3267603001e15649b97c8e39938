@@ -1,0 +1,17 @@
+package com.controller;
+
+import java.util.List;
+
+import com.model.Product;
+import com.service.ProductService;
+
+public class ProductController {
+	public static void main(String[] args) {
+		ProductService productService = new ProductService();
+		List<Product> list = productService.getAllProducts();
+		
+		for(Product p : list) {
+			System.out.println(p.getId() + "---" + p.getTitle() + "---" + p.getPrice());
+		}
+	}
+}

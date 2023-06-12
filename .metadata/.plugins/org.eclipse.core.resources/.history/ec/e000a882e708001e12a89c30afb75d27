@@ -1,0 +1,14 @@
+package com.mymavenapp.persistence;
+
+import java.sql.Connection;
+
+import com.mymavenapp.model.Employee;
+
+public interface EmployeeRepository extends BaseRepository{
+
+	//this repo has dbConnect and dbClose method from BaseRepository
+	
+	public default int save(Employee employee,Connection con){
+		
+	}
+}

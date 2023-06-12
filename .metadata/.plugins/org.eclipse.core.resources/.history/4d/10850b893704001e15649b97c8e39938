@@ -1,0 +1,10 @@
+package com.controller;
+
+import com.model.Student;
+
+public class keywordsApp {
+	public static void main(String[] args) {
+		Student s1 = new Student(1,"imtiyaz","mumbai");
+		System.out.println(s1.getCname());
+	}
+}

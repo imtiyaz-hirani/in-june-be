@@ -1,0 +1,30 @@
+package com.controller;
+
+import com.service.ThreadService;
+
+public class MultithreadingDemo {
+	public static void main(String[] args) { //main
+		/* to create a thread we can use Thread class */
+		
+		Thread t1 = new Thread();
+		
+		
+	}
+}
+
+class ThreadUtil extends Thread{
+	@Override
+	public void run() {
+		// give your task
+		ThreadService.displayNumbers(10); 
+	}
+}
+
+/* 
+ THread class has 2 notable methods:
+ 1. start() - used to start the thread
+ 2. run() - called from start, and executes the task   
+ 
+ Note: do not override start(), dont even worry about it. 
+ Override run() method and give the work
+ */
