@@ -59,5 +59,12 @@ public class ProductService {
 		entityTransaction.commit();
 	}
 
+	public List<?> getByCategoryId(int catId) {
+		entityTransaction.begin();
+		List<?> list = ProductRepository.getByCategoryId(catId,entityManager);
+		entityTransaction.commit();
+		return list;
+	}
+
 }
 //HQL: Hibernate Query Language / JPQL : java persistence query language 

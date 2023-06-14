@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity //hibernate will create product table 
 public class Product {
@@ -20,6 +22,15 @@ public class Product {
 	@Column(length = 2000) //this will reserve varchar(2000) chars for description
 	private String description;
 
+	@OneToOne //cateogry_id will be created inside product table
+	private Category category; 
+	
+	@ManyToOne //vendor_id will be created inside product table 
+	private Vendor vendor;
+	
+	
+	//select p from Product p where p.category.id=?
+	//Note: for Java Pro: OneToOne has Similar effect as of ManyToOne
 	public int getId() {
 		return id;
 	}
@@ -50,6 +61,24 @@ public class Product {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	
+	public Vendor getVendor() {
+		return vendor;
+	}
+
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
 	}
 
 	@Override
