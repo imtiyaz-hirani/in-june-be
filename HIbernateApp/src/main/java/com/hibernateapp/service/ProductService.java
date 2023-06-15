@@ -61,7 +61,8 @@ public class ProductService {
 
 	public List<?> getByCategoryId(int catId) {
 		entityTransaction.begin();
-		List<?> list = ProductRepository.getByCategoryId(catId,entityManager);
+		List<?> list = ProductRepository
+				.getByCategoryId(catId,entityManager);
 		entityTransaction.commit();
 		return list;
 	}
