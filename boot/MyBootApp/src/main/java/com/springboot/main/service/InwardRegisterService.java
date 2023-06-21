@@ -17,4 +17,12 @@ public class InwardRegisterService {
 		return inwardRegisterRepository.save(inwardRegister);
 	}
 
+	public boolean checkQuantity(int productId, int quantityPuchased) {
+		InwardRegister inwardRegister = inwardRegisterRepository
+				.checkQuantity(productId,quantityPuchased);
+		if(inwardRegister == null)
+			return false;
+		return true;
+	}
+
 }

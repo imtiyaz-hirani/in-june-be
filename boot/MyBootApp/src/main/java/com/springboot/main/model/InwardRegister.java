@@ -11,7 +11,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-public class InwardRegister {
+public class InwardRegister { 
+	//select InwardRegister obj (row of DB) :condition(productID,quantity)  
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
