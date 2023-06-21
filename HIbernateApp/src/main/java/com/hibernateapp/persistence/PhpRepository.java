@@ -11,7 +11,8 @@ public interface PhpRepository {
 
 	static List<?> getAllPoliciesByPHid(int phId, EntityManager entityManager) {
 		Query query =  entityManager
-				.createQuery("select php.policy from PolicyHolderPolicy php where php.policyHolder.id=:id", Policy.class);
+				.createQuery("select php.policy from PolicyHolderPolicy php where php.policyHolder.id=:id", 
+						Policy.class);
 		query.setParameter("id", phId);
 		List<?> list = query.getResultList();
 		return list;

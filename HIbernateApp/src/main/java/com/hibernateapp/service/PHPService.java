@@ -26,7 +26,8 @@ public class PHPService {
 
 	public List<?> getPolicies(int phId) {
 		entityTransaction.begin();
-		List<?> list = PhpRepository.getAllPoliciesByPHid(phId,entityManager);
+		List<?> list = PhpRepository
+				.getAllPoliciesByPHid(phId,entityManager);
 		entityTransaction.commit();
 		return list;
 	}
