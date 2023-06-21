@@ -49,4 +49,13 @@ public class ProductService {
 		
 	}
 
+	public Product getById(int productId) {
+		 
+		Optional<Product> optional= productRepository.findById(productId);
+		if(!optional.isPresent()) {
+			return null; 
+		}
+		return optional.get();
+	}
+
 }

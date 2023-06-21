@@ -40,21 +40,11 @@ public class ProductController {
 	 Method: POST
 	 RequestBody: Product product
 	 response: product 
-	 PathVariable: vendorId
+	 PathVariable: none
 	 */
-	@PostMapping("/add/{vendorId}")
-	public ResponseEntity<?> postProduct(@PathVariable("vendorId") int vendorId, 
+	@PostMapping("/add")
+	public ResponseEntity<?> postProduct(
 							   @RequestBody Product product) {
-		/*Step 1: validate vendorId and fetch object from DB */
-		Vendor vendor = vendorService.getById(vendorId);
-		
-		if(vendor == null)
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-					.body("Invalid ID given");
-		
-		/*Step 2: attach vendor to product */
-		product.setVendor(vendor);
-		/*Step 2: save product */
 		product = productService.insert(product);
 		return  ResponseEntity.status(HttpStatus.OK)
 				.body(product);

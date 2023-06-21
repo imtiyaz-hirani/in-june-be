@@ -21,10 +21,7 @@ public class Product {
 	private String description;
 	
 	private double price;
-	
-	@ManyToOne
-	private Vendor vendor;
-	
+	 
 	public int getId() {
 		return id;
 	}
@@ -57,13 +54,6 @@ public class Product {
 		this.price = price;
 	}
 
-	public Vendor getVendor() {
-		return vendor;
-	}
-
-	public void setVendor(Vendor vendor) {
-		this.vendor = vendor;
-	}
-	
+ 
 	
 }

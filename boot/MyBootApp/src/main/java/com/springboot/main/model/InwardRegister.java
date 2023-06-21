@@ -87,6 +87,14 @@ public class InwardRegister {
 
 	public void setRecieptNo(String recieptNo) {
 		this.recieptNo = recieptNo;
+	}
+
+	public LocalDate getDateOfSupply() {
+		return dateOfSupply;
+	}
+
+	public void setDateOfSupply(LocalDate dateOfSupply) {
+		this.dateOfSupply = dateOfSupply;
 	} 
 	
 	
