@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Manager {
@@ -14,7 +15,10 @@ public class Manager {
 	private String name; 
 	
 	private String address;
-
+	
+	@OneToOne
+	private User user;  //this is because, manager will login in
+	
 	public int getId() {
 		return id;
 	}
@@ -37,6 +41,14 @@ public class Manager {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	} 
 	
 	
