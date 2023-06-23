@@ -1,16 +1,20 @@
 package com.springboot.main.controller;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springboot.main.dto.InwardRegisterDto;
 import com.springboot.main.model.Godown;
 import com.springboot.main.model.InwardRegister;
 import com.springboot.main.model.Product;
@@ -71,5 +75,25 @@ public class InwardRegisterController {
 		return ResponseEntity.status(HttpStatus.OK)
 				.body(inwardRegister);
 	}
+
 	
+	@GetMapping("/report")
+	public List<InwardRegisterDto> inwardReport() {
+		/* Go to db and fetch all Inward entries.. */
+		List<InwardRegister> list = inwardRegisterService.getAll();
+		List<InwardRegisterDto> listDto = new ArrayList<>();
+		/* convert the response into UI format */
+		 list.stream().forEach(entry->{
+			 InwardRegisterDto dto = new InwardRegisterDto(); //100X 200X
+			 dto.setProductTitle(entry.getProduct().getTitle());
+			 dto.setProductQuantity(entry.getQuantity());
+			 dto.setGodownLocation(entry.getGodown().getLocation());
+			 dto.setGodownManager(entry.getGodown().getManager().getName());
+			 dto.setSupplierName(entry.getSupplier().getName());
+			 dto.setSupplierCity(entry.getSupplier().getCity());
+			 listDto.add(dto); //100X 200X
+		 });
+		 
+		return listDto; 
+	}
 }

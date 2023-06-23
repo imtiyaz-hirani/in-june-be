@@ -1,5 +1,7 @@
 package com.springboot.main.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,11 @@ public class InwardRegisterService {
 		if(inwardRegister == null)
 			return false;
 		return true;
+	}
+
+	public List<InwardRegister> getAll() {
+		
+		return inwardRegisterRepository.findAll();
 	}
 
 }

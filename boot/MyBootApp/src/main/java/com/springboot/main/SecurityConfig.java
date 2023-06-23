@@ -42,6 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		// here, I am going to list out my api's along with User permissions
 		 http.authorizeRequests()
+		 .antMatchers(HttpMethod.GET,"/user/login").authenticated()
 		 .antMatchers(HttpMethod.POST, "/inwardregister/add/{productId}/{godownId}/{supplierId}").hasAuthority("MANAGER")
 		 .antMatchers(HttpMethod.POST, "/customer/add").permitAll()
 		 .antMatchers(HttpMethod.POST, "/product/add").hasAnyAuthority("MANAGER","USER")

@@ -29,3 +29,10 @@ public class AdminController {
 		
 	}
 }
+//1-2hrs : 5/6hrs 
+//3-4 : 
+
+
+//fundamentals shd be clear... ()  [<ABC,50>,<XYZ,40>] : Collections Framework: List, Map,Set, Streams
+//work on different product scenarios by yourself 
+//practice making project(10 times)
